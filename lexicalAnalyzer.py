@@ -20,7 +20,6 @@ class LexicalAnalyzer:
             ('RBRACE', r'\}'),          # }
             ('LARRAY', r'\['),          # [
             ('RARRAY', r'\]'),          # ]
-            ('DOUBLEQUOTES', r'\"'),          # [
             ('COMMA', r','),            # ,
             ('PCOMMA', r';'),           # ;
             ('EQ', r'=='),              # ==
@@ -38,6 +37,7 @@ class LexicalAnalyzer:
             ('ID', r'[a-zA-Z]\w*'),     # IDENTIFIERS
             ('FLOAT_CONST', r'\d(\d)*\.\d(\d)*'),   # FLOAT
             ('INTEGER_CONST', r'\d(\d)*'),          # INT
+            ('STRING_CONST', r'["][\w\W\d\D\s]*["]'), # STRING
             ('NEWLINE', r'\n'),         # NEW LINE
             ('SKIP', r'[ \t]+'),        # SPACE and TABS
             ('MISMATCH', r'.'),         # ANOTHER CHARACTER

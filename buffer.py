@@ -1,7 +1,7 @@
   
 class Buffer:
     def load_buffer(self):
-        arq = open('exemplo2.lcc', 'r')
+        arq = open('exemplo.lcc', 'r', encoding="utf8")
         text = arq.readline()
 
         buffer = []
