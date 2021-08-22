@@ -8,6 +8,8 @@ def func1(int A, int B)
 
 def principal()
 {
+  float O;
+  O = 4.2;
   int C;
   int D;
   int R;
