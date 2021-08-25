@@ -31,7 +31,7 @@ class LexicalAnalyzer:
             ('MULT', r'\*'),            # *
             ('DIV', r'\/'),             # /
             ('MOD', r'%'),              # %
-            ('ID', r'[a-zA-Z]\w*'),     # IDENTIFIERS
+            ('IDENT', r'[a-zA-Z]\w*'),     # IDENTIFIERS
             ('FLOAT_CONST', r'\d(\d)*\.\d(\d)*'),   # FLOAT
             ('INTEGER_CONST', r'\d(\d)*'),          # INT
             ('STRING_CONST', r'["][\w\W\d\D\s]*["]'), # STRING
@@ -57,9 +57,10 @@ class LexicalAnalyzer:
                 continue
             elif token_type == 'MISMATCH':
                 raise RuntimeError('%r unexpected on line %d' % (token_lexeme, self.lin_num))
+            elif token_type == 'IDENT' and not token_lexeme in lexeme:
+                lexeme.append(token_lexeme)
+                print('Token = {0}, Lexeme = \'{1}\' in Line = {2}'.format(token_type, token_lexeme, self.lin_num))
             else:
                     token.append(token_type)
-                    lexeme.append(token_lexeme)
-                    print('Token = {0}, Lexeme = \'{1}\''.format(token_type, token_lexeme))
 
         return token, lexeme

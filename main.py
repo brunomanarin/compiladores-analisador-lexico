@@ -16,4 +16,4 @@ if __name__ == '__main__':
         token += t
         lexeme += lex
 
-    print('\nRecognize Tokens: ', token)
+    print('\nLista de tokens: ', token)
