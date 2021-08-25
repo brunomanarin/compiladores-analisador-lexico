@@ -57,10 +57,9 @@ class LexicalAnalyzer:
                 continue
             elif token_type == 'MISMATCH':
                 raise RuntimeError('%r unexpected on line %d' % (token_lexeme, self.lin_num))
-            elif token_type == 'IDENT' and not token_lexeme in lexeme:
+            elif token_type == 'IDENT' and token_lexeme not in lexeme:
                 lexeme.append(token_lexeme)
                 print('Token = {0}, Lexeme = \'{1}\' in Line = {2}'.format(token_type, token_lexeme, self.lin_num))
             else:
                     token.append(token_type)
-
         return token, lexeme
