@@ -11,6 +11,7 @@ class LexicalAnalyzer:
             ('ELSE', r'else'),          # else
             ('READ', r'read'),          # read
             ('PRINT', r'print'),        # print
+            ('RETURN', r'return'),      # return
             ('LBRACKET', r'\('),        # (
             ('RBRACKET', r'\)'),        # )
             ('LBRACE', r'\{'),          # {

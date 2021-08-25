@@ -34,6 +34,6 @@ if __name__ == '__main__':
         counterLexeme = 0
     
     for lexeme in countedLexemes:
-     print('IDENT = {0}, Count = \'{1}\' in Lines = {2}'.format(lexeme[0], lexeme[1], lexeme[2]))
+        print('IDENT = {0}, Count = \'{1}\' in Lines = {2}'.format(lexeme[0], lexeme[1], lexeme[2]))
 
     print('\nLista de tokens: ', token)
