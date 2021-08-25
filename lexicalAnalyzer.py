@@ -4,7 +4,7 @@ class LexicalAnalyzer:
 
     def tokenize(self, code):
         rules = [
-            ('def', r'def'),            # def
+            ('DEF', r'def'),            # def
             ('INT', r'int'),            # int
             ('FLOAT', r'float'),        # float
             ('IF', r'if'),              # if
@@ -57,9 +57,10 @@ class LexicalAnalyzer:
                 continue
             elif token_type == 'MISMATCH':
                 raise RuntimeError('%r unexpected on line %d' % (token_lexeme, self.lin_num))
-            elif token_type == 'IDENT' and token_lexeme not in lexeme:
-                lexeme.append(token_lexeme)
-                print('Token = {0}, Lexeme = \'{1}\' in Line = {2}'.format(token_type, token_lexeme, self.lin_num))
-            else:
-                    token.append(token_type)
+            elif token_type == 'IDENT':
+                lexeme.append([token_lexeme, self.lin_num])
+
+            token.append(token_type)
         return token, lexeme
+
+                
