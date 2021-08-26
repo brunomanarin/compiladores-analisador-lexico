@@ -15,7 +15,8 @@ class LexicalAnalyzer:
             ('FOR', r'for'),      # for
             ('NEW', r'new'),      # new
             ('NULL', r'null'),      # null
-            ('STRING', r'string'),      # for
+            ('STRING', r'string'),      # string
+            ('BREAK', r'break'),      # break
             ('LBRACKET', r'\('),        # (
             ('RBRACKET', r'\)'),        # )
             ('LBRACE', r'\{'),          # {
