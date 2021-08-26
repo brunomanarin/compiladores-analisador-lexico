@@ -12,6 +12,10 @@ class LexicalAnalyzer:
             ('READ', r'read'),          # read
             ('PRINT', r'print'),        # print
             ('RETURN', r'return'),      # return
+            ('FOR', r'for'),      # for
+            ('NEW', r'new'),      # new
+            ('NULL', r'null'),      # null
+            ('STRING', r'string'),      # for
             ('LBRACKET', r'\('),        # (
             ('RBRACKET', r'\)'),        # )
             ('LBRACE', r'\{'),          # {
