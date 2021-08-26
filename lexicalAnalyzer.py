@@ -42,7 +42,6 @@ class LexicalAnalyzer:
         ]
 
         tokens_join = '|'.join('(?P<%s>%s)' % x for x in rules)
-        lin_start = 0
 
         token = []
         lexeme = []
@@ -52,7 +51,6 @@ class LexicalAnalyzer:
             token_lexeme = m.group(token_type)
 
             if token_type == 'NEWLINE':
-                lin_start = m.end()
                 self.lin_num += 1
             elif token_type == 'SKIP':
                 continue
